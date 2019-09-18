@@ -57,6 +57,15 @@ app.use(
     })
 );
 
+
+app.use(
+    '/api/v1',
+    require('./router/author')({
+      neo4j,
+      logger,
+    })
+);
+
 /**
  * Error handlers & middlewares
  */
