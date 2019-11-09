@@ -9,7 +9,7 @@ module.exports = ({neo4j, logger}) => {
      */
   router
       .route('/author')
-      .get((req, res, next) => authorController
+      .post((req, res, next) => authorController
           .getAuthor(req, res, next, {neo4j, logger}));
   return router;
 };
